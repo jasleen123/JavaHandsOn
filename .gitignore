@@ -1,0 +1,19 @@
+/target/
+
+*.classpath
+*.project
+*.settings
+
+# Compiled class file
+*.class
+
+# Log File
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
