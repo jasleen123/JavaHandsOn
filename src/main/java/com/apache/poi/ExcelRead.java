@@ -13,7 +13,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelRead {
-	private static final String FILENAME = "C:/Users/jasleen/Desktop/excelWrite.xlsx";
+	private static final String FILENAME = "C:\\Users\\jasleen\\Desktop\\TMD\\ReadExcel\\test.xlsx";
 
 	public static void main(String[] args) {
 		try {
@@ -27,14 +27,14 @@ public class ExcelRead {
 				Iterator<Cell> cellIterator = currentRow.iterator();
 				while (cellIterator.hasNext()) {
 					Cell currentCell = cellIterator.next();
-					System.out.println("UPDATE [pbg].[dbo].[FUNCTION_ROOM_NUMBER_INFO] SET ");
-					if (currentCell.getCellTypeEnum() == CellType.STRING) {
-						System.out.println(currentCell.getStringCellValue() + " = value WHERE condition  -- ");
-					} else if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
-						System.out.println(currentCell.getNumericCellValue() + " = value WHERE condition  -- ");
+					if (currentCell.getCellTypeEnum() == CellType.NUMERIC) {
+						System.out.println("UPDATE [tmd].[dbo].[EMPLOYMENT_NUMBER_INFO] SET FALLBACK = '" + cellIterator.next().toString() + "' WHERE PERSONNEL_NUMBER = '" + (int)currentCell.getNumericCellValue()  + "'");
+					}else if (currentCell.getCellTypeEnum() == CellType.STRING) {
+						System.out.println("UPDATE [tmd].[dbo].[EMPLOYMENT_NUMBER_INFO] SET FALLBACK = '"+currentCell.getStringCellValue()+ "' WHERE PERSONNEL_NUMBER = '" + cellIterator.next().getStringCellValue()+"'");
+					} else if (currentCell.getCellTypeEnum() == CellType.BLANK) {
+						System.out.println("UPDATE [tmd].[dbo].[EMPLOYMENT_NUMBER_INFO] SET FALLBACK = '" + cellIterator.next().toString() + "' WHERE PERSONNEL_NUMBER = '" + currentCell.toString()+ "'");
 					}
 				}
-				System.out.println();
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
