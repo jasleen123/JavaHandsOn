@@ -3,6 +3,8 @@
 *.classpath
 *.project
 *.settings
+*.idea
+
 
 # Compiled class file
 *.class
@@ -17,3 +19,5 @@
 *.zip
 *.tar.gz
 *.rar
+
+*.iml
