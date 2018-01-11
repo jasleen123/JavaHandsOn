@@ -1,4 +1,8 @@
 # JavaHandsOn
-1. This repository consists of my own hands on several java puzzles as well as problem statements.\
-2. Udacity tutorial classes exercises are covered in this.
-3. Various Java APIs implementations like Apache POI.
+This repository consists of the following things :
+1. Hands On various Java APIs implementations like Apache POI.
+2. Udacity exercises 
+3. Thinking In Java exercise chapter wise
+4. Java puzzles - hackerEarth, hackerRank, codingNinja
+5. Coding assignments - company coding interview questions
+
