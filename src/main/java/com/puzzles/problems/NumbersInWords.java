@@ -20,6 +20,7 @@ public class NumbersInWords {
         while (in.hasNextInt()) {
             int remainingNumber = number / 10;
             int lastDigit = number % 10;
+            //int hudsldskdosa
         }
     }
 
