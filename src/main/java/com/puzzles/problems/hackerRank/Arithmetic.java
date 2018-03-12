@@ -1,6 +1,6 @@
 package com.puzzles.problems.hackerRank;
 
-public class Arithmetic{
+public class Arithmetic {
     int add(int param1, int param2){
         return param1+param2;
     }
@@ -8,7 +8,7 @@ public class Arithmetic{
 
     }
 }
-class Adder extends Arithmetic{
+class Adder extends Arithmetic {
 Adder(){
     System.out.println("My superclass is: "+ getClass().getSuperclass().getSimpleName());
 }
