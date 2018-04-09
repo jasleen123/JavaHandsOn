@@ -84,7 +84,7 @@ public class UserSettings {
 
         User user = new User("Jasleen", "Kapil Arora", 102825, new Date(Calendar.getInstance().getTimeInMillis()));
         User user2 = new User("Kapil", "Jasleen", 2810287, new Date(Calendar.getInstance().getTimeInMillis()));
-        List<User> userList = new ArrayList<>();
+        List<User> userList = new ArrayList<User>();
         userList.add(user);
         userList.add(user2);
        // serializeToXML(userList);
